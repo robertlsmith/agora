@@ -13,4 +13,3 @@
 
 # 🌱 Want to check it out?
 ## [Our website](https://www.google.com/search?q=Agora)
-## [Visit our website](https://www.google.com/search?q=Agora){:target="_blank" rel="noopener"}
