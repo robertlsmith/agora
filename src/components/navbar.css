@@ -59,3 +59,21 @@
 #cart {
     height: 25px;
 }
+
+@media screen and (max-width: 768px) {
+    #browse, #about, #signup, #login {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #browse, #about, #signup, #login {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #browse, #about, #signup, #login {
+        font-size: 12px;
+    }
+}
