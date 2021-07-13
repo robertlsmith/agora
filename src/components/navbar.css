@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #fff;
+}
+
+#logo {
+    display: inline-block;
+    vertical-align: middle;
+    align-items: flex-start;
+    height: 90px;
+    transition: 0.5s ease;
+}
+  
+#logo:hover {
+    transition: 0.5s ease;
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.nav-links-right, .nav-links-left {
+    list-style: none;
+    display: flex;
+}
+
+#browse, #about {
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+    padding-right: 30px;
+    position: relative;
+}
+
+#login, #signup {
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+    padding-right: 30px;
+    position: relative;
+}
+
+#browse:hover, #about:hover, #login:hover, #signup:hover {
+    color: #719f04;
+}
+
+#cart {
+    height: 25px;
+}
