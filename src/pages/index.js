@@ -1,8 +1,7 @@
 import * as React from "react";
-// import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
-// import 'bootstrap/dist/css/bootstrap.css';
 import { Helmet } from "react-helmet";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Styles
 

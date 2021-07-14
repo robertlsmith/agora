@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../components/navbar.css'
-//import { Button } from 'react-bootstrap'
 
 export default function navbar() {
     return (
