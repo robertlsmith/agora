@@ -36,24 +36,26 @@
     display: flex;
 }
 
-#browse, #about {
+#browse, #about, #login, #signup  {
     text-decoration: none;
     color: #000;
     font-size: 21px;
-    padding-right: 30px;
+    margin-right: 30px;
     position: relative;
-}
 
-#login, #signup {
-    text-decoration: none;
-    color: #000;
-    font-size: 21px;
-    padding-right: 30px;
-    position: relative;
+    -moz-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    box-sizing: border-box;
+    height: 30px;
 }
 
 #browse:hover, #about:hover, #login:hover, #signup:hover {
-    color: #719f04;
+    border-bottom: 3px solid #719f04; /* Temp color */
+    color: #719f04; /* Temp color */
+    left: 0;
 }
 
 #cart {
