@@ -38,8 +38,8 @@ const signup = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <h2>Account Type:</h2>
-            <Form.Check type="checkbox" label="Customer" />
-            <Form.Check type="checkbox" label="Farmer" />
+            <Form.Check inline type="checkbox" label="Customer" />
+            <Form.Check inline type="checkbox" label="Farmer" />
         </Form.Group>
         <Form.Group className="mb-3">
             <a href="/login" className="toLogin">
