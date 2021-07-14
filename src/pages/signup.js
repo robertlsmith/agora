@@ -5,10 +5,14 @@ import "./styles.css";
 
 /*
     WIP:
-    - Decrese width of forms.
-    - Adjust spacing between alt buttons.
+    - Adjust spacing for/between buttons.
 */
 
+// Styles
+// We could alternatively use in-js css styling, but idk which is best.
+
+
+// Markdown
 const signup = () => {
   return (
     <div className="signup-page">

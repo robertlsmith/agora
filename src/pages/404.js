@@ -1,51 +1,46 @@
 import * as React from "react"
+import Navbar from "../components/Navbar";
 import { Link } from "gatsby"
+import { Button } from "react-bootstrap";
 
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  textAlign: "center",
 }
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  textAlign: "center",
+  fontSize: 50,
+  marginTop: -50,
+  fontWeight: 600
 }
 
 const paragraphStyles = {
   marginBottom: 48,
+  fontSize: 21
 }
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
+const buttonStyles = {
+  marginTop: 30,
+}
+const fofStyles = {
+  fontSize: 200,
+  fontWeight: 600,
+  color: "#064763",
 }
 
 // markup
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Not found</title>
+      <Navbar/>
+      <title>404 | Page Not found</title>
+      <h1 style={fofStyles}>404</h1>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
+        Uh oh! We can't seem to find what you're looking for.<br />
+        Please return home by clicking the button below!
         <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/"><Button style={buttonStyles} variant="signup" size="lg">Agora Home</Button></Link>
       </p>
     </main>
   )
