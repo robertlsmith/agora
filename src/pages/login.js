@@ -33,6 +33,7 @@ const StyledLoginBtn = styled(Button) `
     margin-top: 10px;
     margin-bottom: 30px;
     border-style: none;
+    transition: all 0.25s;
 
     &:hover {
         background-color: #000;
@@ -63,6 +64,7 @@ const StyledGoogleBtn = styled(Button) `
     color: #fff;
     margin-right: 30px;
     border-style: none;
+    transition: all 0.25s;
 
     &:hover {
         background-color: #000;
@@ -75,6 +77,7 @@ const StyledFacebookBtn = styled(Button) `
     color: #fff;
     margin-left: 30px;
     border-style: none;
+    transition: all 0.25s;
 
     &:hover {
         background-color: #000;
