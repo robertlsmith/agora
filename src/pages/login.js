@@ -111,7 +111,7 @@ const Login = () => {
                 .auth()
                 .signInWithEmailAndPassword(data.email, data.password)
             setUser(result)
-            navigate("/")
+            navigate("/browse")
         } catch (err) {
             setData({ ...data, error: err.message })
         }

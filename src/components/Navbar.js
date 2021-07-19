@@ -14,7 +14,7 @@ export default function Navbar() {
     await firebase.auth().signOut()
     navigate("/login")
   }
-
+  
   return (
     <div className="navbar">
       <div className="nav-links-right">

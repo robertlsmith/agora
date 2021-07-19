@@ -127,6 +127,7 @@ const Signup = () => {
     const [data, setData] = useState({
         email: '',
         password: '',
+        password2: '',
         name: '',
         error: null,
     })
@@ -143,9 +144,9 @@ const Signup = () => {
         try {
             const result = await firebase
                 .auth()
-                .createUserWithEmailAndPassword(data.email, data.password)
+                .createUserWithEmailAndPassword(data.email, data.password2)
             setUser(result)
-            navigate("/")
+            navigate("/browse")
         } catch (err) {
             setData({ ...data, error: err.message })
         }
@@ -170,8 +171,17 @@ const Signup = () => {
                     <Form.Control size="md" name="password" type="password" value={data.password} onChange={handleChange} placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control size="md" name="password" type="password" placeholder="Re-enter Password" />
+                    <Form.Control size="md" name="password2" type="password" value={data.password2} onChange={handleChange} placeholder="Re-enter Password" />
                 </Form.Group>
+                {data.password !== data.password2 ? (
+                    <>
+                        <p style={{color: 'red', textAlign: 'center', fontSize: 14, marginTop: 30}}>Please make sure that your passwords match.</p>
+                    </>
+                ) : (
+                    <>
+                        {/* <p style={{color: 'green', textAlign: 'center', fontSize: 14, marginTop: 30}}>Passwords match!</p> */}
+                    </>
+                )}
                 <StyledAccountType className="mb-3" controlId="formBasicCheckbox">
                     <h2>Account Type:</h2>
                     <Form.Check inline type="checkbox" label="Customer" />
