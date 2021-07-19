@@ -60,6 +60,7 @@ const StyledSpan = styled.span `
 const StyledAltBtns = styled.div `
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
 `
 
 const StyledGoogleBtn = styled(Button) `
@@ -85,6 +86,33 @@ const StyledFacebookBtn = styled(Button) `
     &:hover {
         background-color: #000;
         color: #fff;
+    }
+`
+
+const StyledSignupFooter = styled.div `
+    padding: 0 24px;
+    display: block;
+`
+
+const StyledFooterP = styled.p `
+    text-align: center;
+    color: #000;
+    direction: ltr;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 24px;
+    margin-top: 0;
+`
+
+const StyledFooterLinks = styled.a `
+    color: #064763;
+    font-variant: normal;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+        color: #064763;
+        text-decoration: underline;
     }
 `
 
@@ -138,6 +166,14 @@ const signup = () => {
                   </StyledFacebookBtn>
               </StyledAltBtns>
             </Form>
+            <StyledSignupFooter>
+                <StyledFooterP>By continuing, you are indicating that you accept our <br></br> 
+                    <StyledFooterLinks href="javascript:void(0)" target="_blank">Terms of Service
+                    </StyledFooterLinks> and {' '}
+                    <StyledFooterLinks href="javascript:void(0)" target="_blank">Privacy Policy
+                    </StyledFooterLinks>.
+                </StyledFooterP>
+            </StyledSignupFooter>
         </StyledContainer>
     </Layout>
   );
