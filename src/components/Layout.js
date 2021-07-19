@@ -1,9 +1,6 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 
-import "firebase/auth"
-import AuthProvider from "../context/auth";
-
 export default function Layout({ children }) {
   return (
     <main>
@@ -14,7 +11,3 @@ export default function Layout({ children }) {
     </main>
   )
 }
-
-export const wrapRootElement = ({ element }) => (
-  <AuthProvider>{element}</AuthProvider>
-)

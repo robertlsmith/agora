@@ -8,6 +8,8 @@ import firebase from 'gatsby-plugin-firebase';
 import { AuthContext } from '../context/auth';
 import { navigate } from "gatsby-link";
 
+require('firebase/auth')
+
 // Styles
 const StyledContainer = styled(Container) `
     display: block;
@@ -114,6 +116,9 @@ const Login = () => {
             setData({ ...data, error: err.message })
         }
     }
+
+    console.log(firebase.auth) // Undefined
+    console.log(firebase.default.auth) // Function
 
     return (
         <Layout>

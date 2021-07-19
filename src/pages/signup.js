@@ -5,7 +5,9 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import firebase from "gatsby-plugin-firebase";
 import { AuthContext } from "../context/auth";
-import { navigate } from "gatsby-link";
+import { navigate } from 'gatsby';
+
+require('firebase/auth')
 
 // Styles
 const StyledContainer = styled(Container) `
@@ -125,6 +127,7 @@ const Signup = () => {
     const [data, setData] = useState({
         email: '',
         password: '',
+        name: '',
         error: null,
     })
 
@@ -158,7 +161,7 @@ const Signup = () => {
             <h1>Sign Up</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Control size="md" name="name" type="text" placeholder="Name" />
+                    <Form.Control size="md" name="name" type="text" value={data.name} onChange={handleChange} placeholder="Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control size="md" name="email" type="email" value={data.email} onChange={handleChange} placeholder="Email Address" />
