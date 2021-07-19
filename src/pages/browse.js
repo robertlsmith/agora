@@ -1,12 +1,16 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
+import { Helmet } from "react-helmet";
+import Layout from "../components/Layout";
 
 const browse = () => {
     return (
-        <div className="browse-page">
-            <Navbar/>
+        <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+                <title>Agora | Browse</title>
+            </Helmet>
             <h1>Browse</h1>
-        </div>
+        </Layout>
     )
 }
 

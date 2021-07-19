@@ -1,12 +1,16 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
 import { Form, Row, Col, Button } from "react-bootstrap";
+import Layout from "../components/Layout";
+import { Helmet } from "react-helmet";
 import "./styles.css";
 
 const login = () => {
     return (
-        <div className="login-page">
-            <Navbar/>
+        <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+                <title>Agora | Login</title>
+            </Helmet>
             <h1>Login</h1>
             <h2>Log in Below</h2>
             <Form>
@@ -50,7 +54,7 @@ const login = () => {
                     </Button>
                 </div>
             </Form>
-        </div>
+        </Layout>
     )
 }
 

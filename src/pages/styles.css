@@ -22,54 +22,6 @@ h3 {
     font-size: 14px;
 }
 
-/* SIGN UP PAGE */
-.toLogin {
-    text-decoration: none;
-}
-
-#existing-account {
-    color: #175570;
-}
-#existing-account:hover {
-    text-decoration: underline;
-}
-
-.btn-signup {
-    background-color: #064763;
-    color: #fff;
-}
-.btn-signup:hover {
-    color: #fff;
-}
-
-.btn-google {
-    background-color: #D84635;
-    color: #fff;
-}
-.btn-google:hover {
-    color: #fff;
-}
-
-.btn-facebook {
-    background-color: #3B5998;
-    color: #fff;
-}
-.btn-facebook:hover {
-    color: #fff;
-}
-
-.alt-btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.mb-3 {
-    width: 50%;
-    margin: auto;
-}
-
 /* LOGIN PAGE */
 #forgot-password {
     color: #175570;

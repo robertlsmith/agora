@@ -1,7 +1,7 @@
 import * as React from "react"
-import Navbar from "../components/Navbar";
 import { Link } from "gatsby"
 import { Button } from "react-bootstrap";
+import Layout from "../components/Layout";
 
 // styles
 const pageStyles = {
@@ -31,18 +31,19 @@ const fofStyles = {
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <Navbar/>
-      <title>404 | Page Not found</title>
-      <h1 style={fofStyles}>404</h1>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Uh oh! We can't seem to find what you're looking for.<br />
-        Please return home by clicking the button below!
-        <br />
-        <Link to="/"><Button style={buttonStyles} variant="signup" size="lg">Agora Home</Button></Link>
-      </p>
-    </main>
+    <Layout>
+      <main style={pageStyles}>
+        <title>404 | Page Not found</title>
+        <h1 style={fofStyles}>404</h1>
+        <h1 style={headingStyles}>Page not found</h1>
+        <p style={paragraphStyles}>
+          Uh oh! We can't seem to find what you're looking for.<br />
+          Please return home by clicking the button below!
+          <br />
+          <Link to="/"><Button style={buttonStyles} variant="signup" size="lg">Agora Home</Button></Link>
+        </p>
+      </main>
+    </Layout>
   )
 }
 

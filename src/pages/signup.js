@@ -1,7 +1,8 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
-import { Form, Button } from "react-bootstrap";
-import "./styles.css";
+import { Form, Button, Container } from "react-bootstrap";
+import Layout from "../components/Layout";
+import { Helmet } from "react-helmet";
+import styled from "styled-components";
 
 /*
     WIP:
@@ -9,61 +10,135 @@ import "./styles.css";
 */
 
 // Styles
-// We could alternatively use in-js css styling, but idk which is best.
+const StyledContainer = styled(Container) `
+    display: block;
+`
 
+const StyledAccountType = styled(Form.Group) `
+    text-align: center;
+`
+
+const StyledToLogin = styled.a `
+    text-decoration: none;
+`
+
+const StyledExistingAccount = styled.h3 `
+    color: #175570;
+    text-align: center;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+`
+
+const StyledSignUpBtnDiv = styled.div `
+    text-align: center;
+`
+
+const StyledSignupBtn = styled(Button) `
+    background-color: #064763;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
+
+const StyledH2 = styled.h2 `
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+`
+
+const StyledSpan = styled.span `
+    background: #fff; 
+    padding: 0 10px; 
+`
+
+const StyledAltBtns = styled.div `
+    text-align: center;
+    margin-top: 40px;
+`
+
+const StyledGoogleBtn = styled(Button) `
+    background-color: #D84635;
+    color: #fff;
+    margin-right: 30px;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
+
+const StyledFacebookBtn = styled(Button) `
+    background-color: #3B5998;
+    color: #fff;
+    margin-left: 30px;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
 
 // Markdown
 const signup = () => {
   return (
-    <div className="signup-page">
-      <Navbar />
-      <h1>Sign Up</h1>
-      <Form>
-        {/* <input type="text" id="name" name="register" placeholder="Name"></input>
-        <input type="text" id="email" name="register" placeholder="Email Address"></input>
-        <input type="text" id="password" name="register" placeholder="Password"></input>
-        <input type="text" id="password2" name="register" placeholder="Re-enter Password"></input> */}
+    <Layout>
+        <Helmet>
+            <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <title>Agora | Sign Up</title>
+        </Helmet>
+        <StyledContainer>
+            <h1>Sign Up</h1>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                  <Form.Control size="md" type="name" placeholder="Name" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control size="md" type="email" placeholder="Email Address" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Control size="md" type="password" placeholder="Password" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Control size="md" type="password" placeholder="Re-enter Password" />
+              </Form.Group>
+              <StyledAccountType className="mb-3" controlId="formBasicCheckbox">
+                  <h2>Account Type:</h2>
+                  <Form.Check inline type="checkbox" label="Customer" />
+                  <Form.Check inline type="checkbox" label="Farmer" />
+              </StyledAccountType>
+              <Form.Group className="mb-3">
+                  <StyledToLogin href="/login">
+                      <StyledExistingAccount>Already have an account? Sign in here!</StyledExistingAccount>
+                  </StyledToLogin>
+              </Form.Group>
+              <StyledSignUpBtnDiv>
+                <StyledSignupBtn type="submit">
+                    Sign Up
+                </StyledSignupBtn>
+              </StyledSignUpBtnDiv>
 
-        <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Control size="md" type="name" placeholder="Name" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control size="md" type="email" placeholder="Email Address" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control size="md" type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control size="md" type="password" placeholder="Re-enter Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <h2>Account Type:</h2>
-            <Form.Check inline type="checkbox" label="Customer" />
-            <Form.Check inline type="checkbox" label="Farmer" />
-        </Form.Group>
-        <Form.Group className="mb-3">
-            <a href="/login" className="toLogin">
-                <h3 id="existing-account">Already have an account? Sign in here!</h3>
-            </a>
-        </Form.Group>
-        <Button variant="signup" type="submit">
-            Sign Up
-        </Button>
+              <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
 
-        <div>
-            <hr></hr>
-            <h3>Or</h3>
-        </div>
-        <div className="alt-btns">
-            <Button variant="google">
-                Sign up with Google
-            </Button>
-            <Button variant="facebook">
-                Sign up with Facebook
-            </Button>
-        </div>
-      </Form>
-    </div>
+              <StyledAltBtns>
+                  <StyledGoogleBtn>
+                      Sign up with Google
+                  </StyledGoogleBtn>
+                  <StyledFacebookBtn>
+                      Sign up with Facebook
+                  </StyledFacebookBtn>
+              </StyledAltBtns>
+            </Form>
+        </StyledContainer>
+    </Layout>
   );
 };
 
