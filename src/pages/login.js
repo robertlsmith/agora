@@ -1,11 +1,14 @@
 import * as React from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import "./styles.css";
 import styled from "styled-components";
 
 // Styles
+const StyledContainer = styled(Container) `
+    display: block;
+`
 
 const StyledToSomething = styled.a `
     text-decoration: none;
@@ -86,49 +89,51 @@ const login = () => {
                 <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
                 <title>Agora | Login</title>
             </Helmet>
-            <h1>Login</h1>
-            <h2>Log in Below</h2>
-            <Form>
-                <Row>
-                    <Col>
-                        <Form.Group className="mb-4" controlId="formBasicEmail">
-                            <Form.Control size="md" name="email" type="email" placeholder="Your email address" />
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="mb-4" controlId="formBasicPassword">
-                            <Form.Control size="md" name="password" type="password" placeholder="Your password" />
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Form.Group className="mb-3">
-                    <StyledToSomething href="/forgot_password">
-                        <StyledH3 id="forgot-password">Forgot your password? Click here.</StyledH3>
-                    </StyledToSomething>
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <StyledToSomething href="/signup">
-                        <StyledH3>Don’t have an account yet? Click here to join.</StyledH3>
-                    </StyledToSomething>
-                </Form.Group>
-                
-                <StyledLoginBtnDiv>
-                    <StyledLoginBtn type="submit">
-                        Log In
-                    </StyledLoginBtn>
-                </StyledLoginBtnDiv>
-
-                <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
-
-                <StyledAltBtns>
-                    <StyledGoogleBtn>
-                        Log in with Google
-                    </StyledGoogleBtn>
-                    <StyledFacebookBtn>
-                        Log in with Facebook
-                    </StyledFacebookBtn>
-                </StyledAltBtns>
-            </Form>
+            <StyledContainer>
+                <h1>Login</h1>
+                <h2>Log in Below</h2>
+                <Form>
+                    <Row>
+                        <Col>
+                            <Form.Group className="mb-4" controlId="formBasicEmail">
+                                <Form.Control size="md" name="email" type="email" placeholder="Your email address" />
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="mb-4" controlId="formBasicPassword">
+                                <Form.Control size="md" name="password" type="password" placeholder="Your password" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Form.Group className="mb-3">
+                        <StyledToSomething href="/forgot_password">
+                            <StyledH3 id="forgot-password">Forgot your password? Click here.</StyledH3>
+                        </StyledToSomething>
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <StyledToSomething href="/signup">
+                            <StyledH3>Don’t have an account yet? Click here to join.</StyledH3>
+                        </StyledToSomething>
+                    </Form.Group>
+                    
+                    <StyledLoginBtnDiv>
+                        <StyledLoginBtn type="submit">
+                            Log In
+                        </StyledLoginBtn>
+                    </StyledLoginBtnDiv>
+        
+                    <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
+        
+                    <StyledAltBtns>
+                        <StyledGoogleBtn>
+                            Log in with Google
+                        </StyledGoogleBtn>
+                        <StyledFacebookBtn>
+                            Log in with Facebook
+                        </StyledFacebookBtn>
+                    </StyledAltBtns>
+                </Form>
+            </StyledContainer>
         </Layout>
     )
 }
