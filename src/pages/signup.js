@@ -168,9 +168,9 @@ const signup = () => {
             </Form>
             <StyledSignupFooter>
                 <StyledFooterP>By continuing, you are indicating that you accept our <br></br> 
-                    <StyledFooterLinks href="javascript:void(0)" target="_blank">Terms of Service
+                    <StyledFooterLinks href="/tos" target="_blank">Terms of Service
                     </StyledFooterLinks> and {' '}
-                    <StyledFooterLinks href="javascript:void(0)" target="_blank">Privacy Policy
+                    <StyledFooterLinks href="/privacy" target="_blank">Privacy Policy
                     </StyledFooterLinks>.
                 </StyledFooterP>
             </StyledSignupFooter>
