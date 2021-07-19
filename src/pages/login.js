@@ -3,6 +3,81 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import "./styles.css";
+import styled from "styled-components";
+
+// Styles
+
+const StyledToSomething = styled.a `
+    text-decoration: none;
+`
+
+const StyledH3 = styled.h3 `
+    color: #175570;
+    text-align: center;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+`
+
+const StyledLoginBtnDiv = styled.div `
+    text-align: center;
+`
+
+const StyledLoginBtn = styled(Button) `
+    background-color: #064763;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-style: none;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
+
+const StyledH2 = styled.h2 `
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+`
+
+const StyledSpan = styled.span `
+    background: #fff; 
+    padding: 0 10px; 
+`
+
+const StyledAltBtns = styled.div `
+    text-align: center;
+    margin-top: 40px;
+`
+
+const StyledGoogleBtn = styled(Button) `
+    background-color: #D84635;
+    color: #fff;
+    margin-right: 30px;
+    border-style: none;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
+
+const StyledFacebookBtn = styled(Button) `
+    background-color: #3B5998;
+    color: #fff;
+    margin-left: 30px;
+    border-style: none;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+`
 
 const login = () => {
     return (
@@ -17,42 +92,42 @@ const login = () => {
                 <Row>
                     <Col>
                         <Form.Group className="mb-4" controlId="formBasicEmail">
-                            <Form.Control size="md" type="email" placeholder="Your email address" />
+                            <Form.Control size="md" name="email" type="email" placeholder="Your email address" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-4" controlId="formBasicPassword">
-                            <Form.Control size="md" type="password" placeholder="Your password" />
+                            <Form.Control size="md" name="password" type="password" placeholder="Your password" />
                         </Form.Group>
                     </Col>
                 </Row>
                 <Form.Group className="mb-3">
-                    <a href="/forgot_password" className="toLogin">
-                        <h3 id="forgot-password">Forgot your password? Click here.</h3>
-                    </a>
+                    <StyledToSomething href="/forgot_password">
+                        <StyledH3 id="forgot-password">Forgot your password? Click here.</StyledH3>
+                    </StyledToSomething>
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <a href="/signup" className="toLogin">
-                        <h3 id="new-account">Don’t have an account yet? Click here to join.</h3>
-                    </a>
+                    <StyledToSomething href="/signup">
+                        <StyledH3>Don’t have an account yet? Click here to join.</StyledH3>
+                    </StyledToSomething>
                 </Form.Group>
                 
-                <Button variant="signup" type="submit">
-                    Sign Up
-                </Button>
+                <StyledLoginBtnDiv>
+                    <StyledLoginBtn type="submit">
+                        Log In
+                    </StyledLoginBtn>
+                </StyledLoginBtnDiv>
 
-                <div>
-                    <hr></hr>
-                    <h3>Or</h3>
-                </div>
-                <div className="alt-btns">
-                    <Button variant="google">
-                        Sign up with Google
-                    </Button>
-                    <Button variant="facebook">
-                        Sign up with Facebook
-                    </Button>
-                </div>
+                <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
+
+                <StyledAltBtns>
+                    <StyledGoogleBtn>
+                        Log in with Google
+                    </StyledGoogleBtn>
+                    <StyledFacebookBtn>
+                        Log in with Facebook
+                    </StyledFacebookBtn>
+                </StyledAltBtns>
             </Form>
         </Layout>
     )

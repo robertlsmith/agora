@@ -21,18 +21,3 @@ h3 {
     text-align: center;
     font-size: 14px;
 }
-
-/* LOGIN PAGE */
-#forgot-password {
-    color: #175570;
-}
-#forgot-password:hover {
-    text-decoration: underline;
-}
-
-#new-account {
-    color: #175570;
-}
-#new-account:hover {
-    text-decoration: underline;
-}

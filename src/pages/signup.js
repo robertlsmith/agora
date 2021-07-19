@@ -4,11 +4,6 @@ import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 
-/*
-    WIP:
-    - Adjust spacing for/between buttons.
-*/
-
 // Styles
 const StyledContainer = styled(Container) `
     display: block;
@@ -40,6 +35,7 @@ const StyledSignupBtn = styled(Button) `
     color: #fff;
     margin-top: 10px;
     margin-bottom: 30px;
+    border-style: none;
 
     &:hover {
         background-color: #000;
@@ -69,6 +65,7 @@ const StyledGoogleBtn = styled(Button) `
     background-color: #D84635;
     color: #fff;
     margin-right: 30px;
+    border-style: none;
 
     &:hover {
         background-color: #000;
@@ -80,6 +77,7 @@ const StyledFacebookBtn = styled(Button) `
     background-color: #3B5998;
     color: #fff;
     margin-left: 30px;
+    border-style: none;
 
     &:hover {
         background-color: #000;
@@ -99,16 +97,16 @@ const signup = () => {
             <h1>Sign Up</h1>
             <Form>
               <Form.Group className="mb-3" controlId="formBasicName">
-                  <Form.Control size="md" type="name" placeholder="Name" />
+                  <Form.Control size="md" name="name" type="text" placeholder="Name" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Control size="md" type="email" placeholder="Email Address" />
+                  <Form.Control size="md" name="email" type="email" placeholder="Email Address" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Control size="md" type="password" placeholder="Password" />
+                  <Form.Control size="md" name="password" type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Control size="md" type="password" placeholder="Re-enter Password" />
+                  <Form.Control size="md" name="password" type="password" placeholder="Re-enter Password" />
               </Form.Group>
               <StyledAccountType className="mb-3" controlId="formBasicCheckbox">
                   <h2>Account Type:</h2>
