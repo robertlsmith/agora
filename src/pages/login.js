@@ -1,9 +1,12 @@
-import * as React from "react";
+import React, { useState, useContext } from 'react';
 import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import "./styles.css";
 import styled from "styled-components";
+import firebase from 'gatsby-plugin-firebase';
+import { AuthContext } from '../context/auth';
+import { navigate } from "gatsby-link";
 
 // Styles
 const StyledContainer = styled(Container) `
@@ -85,7 +88,33 @@ const StyledFacebookBtn = styled(Button) `
     }
 `
 
-const login = () => {
+const Login = () => {
+    const [data, setData] = useState({
+        email: '',
+        password: '',
+        error: null,
+    })
+
+    const { setUser } = useContext(AuthContext)
+
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setData({ ...data, error: null })
+        try {
+            const result = await firebase
+                .auth()
+                .signInWithEmailAndPassword(data.email, data.password)
+            setUser(result)
+            navigate("/")
+        } catch (err) {
+            setData({ ...data, error: err.message })
+        }
+    }
+
     return (
         <Layout>
             <Helmet>
@@ -95,16 +124,16 @@ const login = () => {
             <StyledContainer>
                 <h1>Login</h1>
                 <h2>Log in Below</h2>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <Row>
                         <Col>
                             <Form.Group className="mb-4" controlId="formBasicEmail">
-                                <Form.Control size="md" name="email" type="email" placeholder="Your email address" />
+                                <Form.Control size="md" name="email" type="email" value={data.email} onChange={handleChange} placeholder="Your email address" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="mb-4" controlId="formBasicPassword">
-                                <Form.Control size="md" name="password" type="password" placeholder="Your password" />
+                                <Form.Control size="md" name="password" type="password" value={data.password} onChange={handleChange} placeholder="Your password" />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -124,6 +153,7 @@ const login = () => {
                             Log In
                         </StyledLoginBtn>
                     </StyledLoginBtnDiv>
+                    {data.error ? <p style={{color: 'red', textAlign: 'center', fontSize: 14, marginBottom: 40}}>{data.error}</p> : null}
         
                     <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
         
@@ -141,4 +171,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login

@@ -1,8 +1,11 @@
-import * as React from "react";
+import React, { useState, useContext } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import firebase from "gatsby-plugin-firebase";
+import { AuthContext } from "../context/auth";
+import { navigate } from "gatsby-link";
 
 // Styles
 const StyledContainer = styled(Container) `
@@ -11,6 +14,7 @@ const StyledContainer = styled(Container) `
 
 const StyledAccountType = styled(Form.Group) `
     text-align: center;
+    margin-top: 30px;
 `
 
 const StyledToLogin = styled.a `
@@ -117,8 +121,34 @@ const StyledFooterLinks = styled.a `
 `
 
 // Markdown
-const signup = () => {
-  return (
+const Signup = () => {
+    const [data, setData] = useState({
+        email: '',
+        password: '',
+        error: null,
+    })
+
+    const { setUser } = useContext(AuthContext)
+
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setData({ ...data, error: null })
+        try {
+            const result = await firebase
+                .auth()
+                .createUserWithEmailAndPassword(data.email, data.password)
+            setUser(result)
+            navigate("/")
+        } catch (err) {
+            setData({ ...data, error: err.message })
+        }
+    }
+
+    return (
     <Layout>
         <Helmet>
             <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -126,45 +156,47 @@ const signup = () => {
         </Helmet>
         <StyledContainer>
             <h1>Sign Up</h1>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicName">
-                  <Form.Control size="md" name="name" type="text" placeholder="Name" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Control size="md" name="email" type="email" placeholder="Email Address" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Control size="md" name="password" type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Control size="md" name="password" type="password" placeholder="Re-enter Password" />
-              </Form.Group>
-              <StyledAccountType className="mb-3" controlId="formBasicCheckbox">
-                  <h2>Account Type:</h2>
-                  <Form.Check inline type="checkbox" label="Customer" />
-                  <Form.Check inline type="checkbox" label="Farmer" />
-              </StyledAccountType>
-              <Form.Group className="mb-3">
-                  <StyledToLogin href="/login">
-                      <StyledExistingAccount>Already have an account? Sign in here!</StyledExistingAccount>
-                  </StyledToLogin>
-              </Form.Group>
-              <StyledSignUpBtnDiv>
-                <StyledSignupBtn type="submit">
-                    Sign Up
-                </StyledSignupBtn>
-              </StyledSignUpBtnDiv>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicName">
+                    <Form.Control size="md" name="name" type="text" placeholder="Name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Control size="md" name="email" type="email" value={data.email} onChange={handleChange} placeholder="Email Address" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control size="md" name="password" type="password" value={data.password} onChange={handleChange} placeholder="Password" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control size="md" name="password" type="password" placeholder="Re-enter Password" />
+                </Form.Group>
+                <StyledAccountType className="mb-3" controlId="formBasicCheckbox">
+                    <h2>Account Type:</h2>
+                    <Form.Check inline type="checkbox" label="Customer" />
+                    <Form.Check inline type="checkbox" label="Farmer" />
+                </StyledAccountType>
+                <Form.Group className="mb-3">
+                    <StyledToLogin href="/login">
+                        <StyledExistingAccount>Already have an account? Sign in here!</StyledExistingAccount>
+                    </StyledToLogin>
+                </Form.Group>
 
-              <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
+                <StyledSignUpBtnDiv>
+                  <StyledSignupBtn type="submit">
+                      Sign Up
+                  </StyledSignupBtn>
+                </StyledSignUpBtnDiv>
+                {data.error ? <p style={{color: 'red', textAlign: 'center', fontSize: 14, marginBottom: 40}}>{data.error}</p> : null}
 
-              <StyledAltBtns>
-                  <StyledGoogleBtn>
-                      Sign up with Google
-                  </StyledGoogleBtn>
-                  <StyledFacebookBtn>
-                      Sign up with Facebook
-                  </StyledFacebookBtn>
-              </StyledAltBtns>
+                <StyledH2><StyledSpan>Or</StyledSpan></StyledH2>
+
+                <StyledAltBtns>
+                    <StyledGoogleBtn>
+                        Sign up with Google
+                    </StyledGoogleBtn>
+                    <StyledFacebookBtn>
+                        Sign up with Facebook
+                    </StyledFacebookBtn>
+                </StyledAltBtns>
             </Form>
             <StyledSignupFooter>
                 <StyledFooterP>By continuing, you are indicating that you accept our <br></br> 
@@ -179,4 +211,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
