@@ -34,32 +34,32 @@ const about = () => {
                 <h1>Meet the Team</h1>
                 <div class = "container">
                 <div class = "about">
-                    <img src = {Catherine}></img>
+                    <img src = {Catherine} alt="Catherine"></img>
                     <h3>Catherine Hu</h3> 
                     <h3>Product Manager</h3>
                 </div>
                 <div class = "about">
-                    <img src = {Anoushka}></img>
+                    <img src = {Anoushka} alt="Anoushka"></img>
                     <h3>Anoushka Gupta</h3> 
                     <h3>Designer</h3>
                  </div>
                 <div class = "about">
-                    <img src = {Robert}></img>
+                    <img src = {Robert} alt="Robert"></img>
                     <h3>Robert Smith</h3>
                     <h3>Software Engineer</h3> 
                 </div>
                 <div class = "about">   
-                    <img src = {Jefrin}></img>
+                    <img src = {Jefrin} alt="Jefrin"></img>
                     <h3>Jefrin Jojan</h3>
                     <h3>Software Engineer</h3> 
                 </div>
                 <div class = "about">
-                    <img src = {Bri}></img>
+                    <img src = {Bri} alt="Brianna"></img>
                     <h3>Brianna Higgins</h3>
                     <h3>Software Engineer</h3> 
                 </div>
                 <div class = "about">
-                    <img src = {Jen}></img>
+                    <img src = {Jen} alt="Jennifer"></img>
                     <h3>Jennifer Vesper</h3>
                     <h3>Software Engineer</h3> 
                 </div>

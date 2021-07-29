@@ -63,7 +63,7 @@ const farmer_profile = () => {
                         </div>
 
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="25"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="25"> 
                             </textarea>
                         </div>
                     </Container>
@@ -73,7 +73,7 @@ const farmer_profile = () => {
                             <StyledH2>Phone:</StyledH2>
                         </div>
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="25"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="25"> 
                             </textarea>
                         </div>
                     </Container>
@@ -83,7 +83,7 @@ const farmer_profile = () => {
                             <StyledH2>Website:</StyledH2>
                         </div>
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="25"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="25"> 
                             </textarea>
                         </div>
                     </Container>
@@ -93,7 +93,7 @@ const farmer_profile = () => {
                             <StyledH2>Farmer's Market:</StyledH2>
                         </div>
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="25"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="25"> 
                             </textarea>
                         </div>
                     </Container>
@@ -104,7 +104,7 @@ const farmer_profile = () => {
                         </div>
 
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="25"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="25"> 
                             </textarea>
                         </div>
                     </Container>
@@ -135,7 +135,7 @@ const farmer_profile = () => {
                         </div>
 
                         <div>
-                        <textarea id="Agora" name="Agora" rows="1" cols="15"> 
+                        <textarea id="textbox" name="textbox" rows="1" cols="15"> 
                         </textarea>
                         </div>
 
@@ -148,7 +148,7 @@ const farmer_profile = () => {
                         </div>
                        
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="15"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="15"> 
                             </textarea>
                         </div>
                    </Container>
@@ -159,7 +159,7 @@ const farmer_profile = () => {
                         </div>
 
                         <div>
-                            <textarea id="Agora" name="Agora" rows="1" cols="15"> 
+                            <textarea id="textbox" name="textbox" rows="1" cols="15"> 
                             </textarea>
                         </div>
                    </Container>

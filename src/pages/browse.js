@@ -9,7 +9,9 @@ const browse = () => {
                 <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
                 <title>Agora | Browse</title>
             </Helmet>
-            <h1>Browse</h1>
+            <div>
+                <h1>Browse</h1>
+            </div>
         </Layout>
     )
 }

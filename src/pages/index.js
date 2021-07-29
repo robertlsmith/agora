@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "../components/Layout";
 import Card from "../components/Card"; 
 import HowItWorks from "../assets/how_it_works.png"
+import SearchIco from "../assets/search_ico.png"
+import GirlShopping from "../assets/girl_with_shoppingbag.png"
 
 // Styles
 
@@ -21,8 +23,15 @@ const IndexPage = () => {
       <div>
       <br></br>
         <div class = "landing-top">
+          <img src={GirlShopping} alt="Girl with shopping bag."></img>
           <h1>Local, sustainable food — just one click away</h1>
           <h3>Just enter your location below to access local farmers near you</h3>
+          <form class="address-search">
+            <div id="submit-box">
+              <a type="submit" value="Submit"><img id="search-ico" src={SearchIco} alt="search"></img></a>
+            </div>
+            <input id="textbox" type="text" placeholder="Enter Address Here"></input>
+          </form>
         </div>
         {/* TODO here 
 
@@ -34,7 +43,7 @@ const IndexPage = () => {
         <br></br>
         <div class = "landing-middle">
           <h1>How it works</h1>
-          <img src = {HowItWorks}></img>
+          <img src = {HowItWorks} alt="icons"></img>
         </div>
 
         <div class="container landing-middle">
