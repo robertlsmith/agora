@@ -17,37 +17,35 @@ const IndexPage = () => {
         <title>Agora | Home</title>
       </Helmet>
       
-    {/* <div>
-        <div>
-        <h1>Local, sustainable food — just one click away</h1>
-        <h3>Just enter your location below to access local farmers near you</h3>
-      </div>
-
       <div>
+        <div>
+          <h1>Local, sustainable food — just one click away</h1>
+          <h3>Just enter your location below to access local farmers near you</h3>
+        </div>
 
-        <h1>How it Works</h1>
-        <div class = "container" >
-          
+        <div>
+          <h1>How it Works</h1>
+        </div>
+
+        <div class="container">
           <div>
             <h3>Input your location to help us find options most convient to you</h3>
           </div>
           
-        <div>
-          <h3>Search for a specific item or browse through our extensive bank of products, farms, and farmer’s markets  </h3>
+          <div>
+            <h3>Search for a specific item or browse through our extensive bank of products, farms, and farmer’s markets  </h3>
+          </div>
+
+          <div>
+            <h3>Finished shopping? <br/> Just add to cart, pick your preferred deliery option, and voila!<br/></h3>
+          </div>
         </div>
 
         <div>
-          <h3>Finished shopping? <br>Just add to cart, pick your preferred deliery option, and voila! </br>  </h3>
-        </div>
-        </div>
+          <h1>Featured</h1>
         </div>
 
-      <div>
-      <h1>Featured</h1>
       </div>
-      </div>  */}
-      
-      
     </Layout>
   );
 };
