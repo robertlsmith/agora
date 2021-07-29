@@ -10,7 +10,7 @@ const browse = () => {
                 <title>Agora | Browse</title>
             </Helmet>
             <div>
-                <h1>Browse</h1>
+                <h1>Test</h1>
             </div>
         </Layout>
     )
