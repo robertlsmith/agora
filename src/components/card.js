@@ -1,7 +1,16 @@
-// import React, { useContext } from "react";
-// import { Link } from "gatsby";
-// import "../components/navbar.css";
-// import { AuthContext } from "../context/auth";
-// import { navigate } from 'gatsby';
-// import firebase from "gatsby-plugin-firebase";
+import React, { useContext } from "react";
+import "../components/card.css";
 
+export default function Card() {
+    return (
+      <div className = "card"></div>
+    );
+  }
+  
+
+{/* TODO here 
+  image 
+  name 
+  description 
+  also add a button for learn more 
+*/}

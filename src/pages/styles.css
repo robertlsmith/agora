@@ -22,19 +22,19 @@
 h1 {
     padding-top: 1vw;
     text-align: center;
-    font-size: 48px; 
+    font-size: 36px; 
     font-weight: var(--fontWeight-bold);
 }
 
 h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: var(--fontWeight-semibold);
 }
 
 h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: var(--fontWeight-normal);
 }
 
@@ -46,7 +46,51 @@ p {
 
 .container{
     display: flex; 
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
 }
 
+.center{
+    width:80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+}
 
+.about img{
+    width:15vw;
+    height:auto;  
+    border-radius: 50%;
+    padding: 4vh 1vw; 
+}
+
+.landing-top{
+    width:40%; 
+    text-align: right;
+}
+.landing-top h1{
+    text-align: right;
+}
+.landing-top h3{
+    text-align: right;
+}
+
+.landing-middle h1{
+    text-align: left;
+    padding-left: 8vw;
+}
+.landing-middle img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%; 
+}
+.landing-middle h3{
+    width:60%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+}
+
+.landing-bottom{
+    background: var(--beige);
+}
