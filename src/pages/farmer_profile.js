@@ -8,6 +8,7 @@ const StyledDropText = styled.h2 `
     font-size: 20px;
     text-align: center;
     padding-left: 10px;
+    font-weight: 700; 
 `
 
 const StyledDropdown = styled.div `
@@ -50,9 +51,11 @@ const farmer_profile = () => {
             <Container>
                 <div>
                     <h1>Farmer Profile</h1>
+                    <br></br>
                     <StyledDropdown>
                         <StyledDropText>Basic Info</StyledDropText>
                     </StyledDropdown>
+                    <br></br>
                     
                     <Container>
                         <div>
@@ -105,11 +108,11 @@ const farmer_profile = () => {
                             </textarea>
                         </div>
                     </Container>
-
+                    <br></br>
                     <StyledDropdown>
                         <StyledDropText>Shipping/Delivery</StyledDropText>
                     </StyledDropdown>
-
+                    <br></br>
                     <Container>
                         <div>
                             <StyledH2>Delivery Type: </StyledH2>
