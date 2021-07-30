@@ -2,7 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "../components/Layout";
-import Card from "../components/Card"; 
+import Card from "../components/card"; 
 import HowItWorks from "../assets/how_it_works.png"
 import SearchIco from "../assets/search_ico.png"
 import GirlShopping from "../assets/girl_with_shoppingbag.png"

@@ -115,3 +115,46 @@ p {
 .landing-bottom{
     background: var(--beige);
 }
+
+.browse-address h2{
+    text-align: left;
+    padding-left:100px;
+}
+
+.container-browse{
+    display: flex; 
+    padding-left: 100px;
+    float: left;
+    justify-content: space-evenly; 
+    
+}
+
+.filter h2{
+    text-align: left;
+}
+
+.container-2{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.containerdivNL{
+    margin-top: -90px;
+    padding: 100px;
+    clear: both; 
+    float: left; 
+    display: block;
+}
+
+#sort-label {
+    margin-right: 20px;
+}
+
+#dropdown-label {
+    background: transparent;
+    border-style: none;
+    color: #000;
+    font-size: 15px;
+    align-content: center;
+}

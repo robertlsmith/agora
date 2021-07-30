@@ -1,7 +1,36 @@
-.card{
+.card {
     width:20vw; 
     height:40vh; 
     background-color: white; 
     box-shadow: 12px 12px 0 0 #064763;
-    margin-top: 10px; 
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#icon {
+    padding-top: 60px;
+    max-width: 80px;
+}
+
+#name {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#desc {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#btn {
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    border-style: none;
+    transition: 0.25s;
+}
+
+#btn:hover {
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
 }
