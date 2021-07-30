@@ -6,10 +6,7 @@
 </h2>
 
 # 🌱 What is Agora?
-## Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Agora is the Latin word for marketplace. And that’s exactly what we are. We’re here to bridge the gap between farmers growing incredibly fresh food and consumers who are looking for a streamlined platform to purchase that kind of produce.
 
 # 🌱 Why did we make this?
-## Fames ac turpis egestas sed tempus urna et. Consectetur lorem donec massa sapien faucibus et molestie. Sodales ut etiam sit amet nisl purus in mollis. Sed elementum tempus egestas sed sed risus. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Sit amet massa vitae tortor condimentum lacinia quis. Erat imperdiet sed euismod nisi porta lorem.
-
-# 🌱 Want to check it out?
-## [Our website](https://www.google.com/search?q=Agora)
+## Farm fresh food is often difficult to find in most cities. Existing resources often offer limited information on vendor availabilities, making it less accessible to people.
