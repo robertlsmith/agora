@@ -59,7 +59,26 @@ const Browse = () => {
                             </div>
                                  <input id="textbox" type="text" placeholder="Search"></input>
                         </form>
-                   
+                        <div className = "center"><table style = {{width:`100%`}}>
+                                        <tr>
+                                            <th><Card></Card></th>
+                                            <th><Card></Card></th>
+                                            <th><Card></Card></th>
+                                        </tr>
+                                        <br></br>
+                                        <tr>
+                                            <td><Card></Card></td>
+                                            <td><Card></Card></td>
+                                            <td><Card></Card></td>
+                                        </tr>
+                                        <br></br>
+                                        <tr>
+                                            <td><Card></Card></td>
+                                            <td><Card></Card></td>
+                                            <td><Card></Card></td>
+                                        </tr>
+                                        </table></div>
+                            
                     </div>
                   
 

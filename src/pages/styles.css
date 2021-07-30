@@ -66,6 +66,7 @@ p {
 .landing-top{
     width:40%; 
     text-align: right;
+    margin-left: 50vw; 
 }
 
 .address-search {

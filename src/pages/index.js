@@ -63,9 +63,14 @@ const IndexPage = () => {
         <div class = "landing-bottom">
           <h1>Featured</h1>
           <div class = "container">
-            <h3 style = {{textAlign: `center`}}>Farmer<Card></Card></h3>
-            <h3 style = {{textAlign: `center`}}>Produce<Card></Card></h3>
-            <h3 style = {{textAlign: `center`}}>Farmer's Market<Card></Card></h3>
+            <h3 style = {{textAlign: `center`}} class = "center">Farmer</h3>
+            <h3 style = {{textAlign: `center`}} class = "center">Produce</h3>
+            <h3 style = {{textAlign: `center`}} class = "center">Farmer's Market</h3>
+          </div>
+          <div class = "container">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
           </div>
           <br></br>
         </div>
